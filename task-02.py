@@ -8,14 +8,16 @@ class Node:
 
 
 def preorder_traversal(root):
+
     if root is None:
-        return float("-inf")
+        return float("NaN")
 
-    max_value = root.val
-    max_left = preorder_traversal(root.left)
-    max_right = preorder_traversal(root.right)
+    min_value = root.val
 
-    return max(max_value, max_left, max_right)
+    min_left = preorder_traversal(root.left)
+    min_right = preorder_traversal(root.right)
+
+    return min(min_value, min_left, min_right)
 
 
 root = Node(1)
