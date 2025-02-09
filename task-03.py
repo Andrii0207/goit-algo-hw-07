@@ -8,16 +8,15 @@ class Node:
 
 
 def preorder_traversal(root):
-
     if root is None:
-        return float("inf")
+        return 0
 
-    min_value = root.val
+    result = root.val
 
-    min_left = preorder_traversal(root.left)
-    min_right = preorder_traversal(root.right)
+    left_value = preorder_traversal(root.left)
+    right_value = preorder_traversal(root.right)
 
-    return min(min_value, min_left, min_right)
+    return result + left_value + right_value
 
 
 root = Node(1)
@@ -31,8 +30,8 @@ root.right.right = Node(7)
 
 if __name__ == "__main__":
 
-    def min_value(root):
+    def sum_value(root):
         result = preorder_traversal(root)
         print(result)
 
-    min_value(root)
+    sum_value(root)
