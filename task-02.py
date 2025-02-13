@@ -33,6 +33,6 @@ if __name__ == "__main__":
 
     def min_value(root):
         result = preorder_traversal(root)
-        print(result)
+        print(f"Найменше значення у дереві: {result}")
 
     min_value(root)

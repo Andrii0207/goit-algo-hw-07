@@ -31,6 +31,6 @@ if __name__ == "__main__":
 
     def max_value(root):
         result = preorder_traversal(root)
-        print(result)
+        print(f"Максимальне значення у дереві: {result}")
 
     max_value(root)

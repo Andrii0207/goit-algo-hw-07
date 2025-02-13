@@ -32,6 +32,6 @@ if __name__ == "__main__":
 
     def sum_value(root):
         result = preorder_traversal(root)
-        print(result)
+        print(f"Сума всіх значень у дереві: {result}")
 
     sum_value(root)
